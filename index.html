@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WavePilot Labs - AI-Powered Smart Glasses for Accessibility</title>
+    <meta name="description" content="WavePilot Labs builds AI-powered smart glasses that empower people with disabilities. Enterprise-grade technology with a privacy-first design.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+        <p class="loading-text">Initializing Neural Interface...</p>
+    </div>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">WavePilot Labs</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#technology" class="nav-link">Technology</a></li>
+                <li><a href="#accessibility" class="nav-link">Accessibility</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-nav-cta">Request Demo</a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="gradient-text glitch" data-text="Vision Without Limits">Vision Without Limits</span>
+            </h1>
+            <p class="hero-subtitle">AI-powered smart glasses designed to empower people with disabilities</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">Explore Technology</button>
+                <button class="btn btn-secondary">Join Waitlist</button>
+            </div>
+            <div class="trusted-by">
+                <span class="trusted-label">Trusted by</span>
+                <div class="logo-row">
+                    <div class="logo-item">Acme</div>
+                    <div class="logo-item">NovaHealth</div>
+                    <div class="logo-item">CityLabs</div>
+                    <div class="logo-item">Orbit</div>
+                </div>
+                <p class="privacy-note">SOC 2-ready · GDPR-compliant · Privacy-first by design</p>
+            </div>
+        </div>
+        <div id="three-container" class="three-container"></div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <p>Scroll to explore</p>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Revolutionary Features</h2>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Real-Time Object Recognition</h3>
+                    <p>Advanced AI identifies objects, people, and text in your environment instantly</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                        </svg>
+                    </div>
+                    <h3>Navigation Assistance</h3>
+                    <p>Seamless indoor and outdoor navigation with voice-guided directions</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5Z"/>
+                        </svg>
+                    </div>
+                    <h3>Emotional Intelligence</h3>
+                    <p>Recognize facial expressions and social cues for better interpersonal interactions</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <h3>Text-to-Speech</h3>
+                    <p>Instant conversion of written text to natural-sounding speech</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="technology" class="technology">
+        <div class="container">
+            <h2 class="section-title">Cutting-Edge Technology</h2>
+            <div class="tech-showcase">
+                <div class="tech-info">
+                    <div class="tech-item">
+                        <h3>Neural Processing Unit</h3>
+                        <p>Custom-designed NPU delivers 50 TOPS of AI processing power while maintaining all-day battery life</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Ultra-Wide Camera Array</h3>
+                        <p>160° field of view with depth sensing and low-light optimization</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Bone Conduction Audio</h3>
+                        <p>Crystal-clear audio without blocking environmental sounds</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 78%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-visual">
+                    <div class="floating-card">
+                        <div class="card-content">
+                            <span class="card-label">AI Processing</span>
+                            <span class="card-value">50 TOPS</span>
+                        </div>
+                    </div>
+                    <div class="floating-card" style="animation-delay: 0.5s">
+                        <div class="card-content">
+                            <span class="card-label">Battery Life</span>
+                            <span class="card-value">24 Hours</span>
+                        </div>
+                    </div>
+                    <div class="floating-card" style="animation-delay: 1s">
+                        <div class="card-content">
+                            <span class="card-label">Weight</span>
+                            <span class="card-value">45g</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="security" class="security">
+        <div class="container">
+            <h2 class="section-title">Security & Compliance</h2>
+            <p class="section-subtitle">Enterprise-grade data protection from day one</p>
+            <div class="badge-row">
+                <div class="badge">SOC 2 (in progress)</div>
+                <div class="badge">GDPR</div>
+                <div class="badge">WCAG 2.1 AA</div>
+                <div class="badge">Encryption at Rest & Transit</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="accessibility" class="accessibility">
+        <div class="container">
+            <h2 class="section-title">Designed for Everyone</h2>
+            <div class="access-features">
+                <div class="access-card">
+                    <div class="icon-wrapper">
+                        <div class="icon-bg"></div>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Visual Impairment</h3>
+                    <p>Scene description, obstacle detection, and text reading capabilities</p>
+                </div>
+                <div class="access-card">
+                    <div class="icon-wrapper">
+                        <div class="icon-bg"></div>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12z"/>
+                            <path d="M8 12h8m-4-4v8"/>
+                        </svg>
+                    </div>
+                    <h3>Hearing Impairment</h3>
+                    <p>Visual alerts, speech-to-text transcription, and sign language recognition</p>
+                </div>
+                <div class="access-card">
+                    <div class="icon-wrapper">
+                        <div class="icon-bg"></div>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3>Cognitive Support</h3>
+                    <p>Memory aids, task reminders, and simplified interfaces</p>
+                </div>
+                <div class="access-card">
+                    <div class="icon-wrapper">
+                        <div class="icon-bg"></div>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="5" r="3"/>
+                            <path d="M12 8v13m-5-4l5 3 5-3"/>
+                        </svg>
+                    </div>
+                    <h3>Motor Disabilities</h3>
+                    <p>Voice commands, eye tracking, and gesture-free controls</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Join the Future</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Be Part of the Revolution</h3>
+                    <p>Join our waitlist to be among the first to experience WavePilot smart glasses</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-number">10K+</span>
+                            <span class="stat-label">Waitlist Members</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2024</span>
+                            <span class="stat-label">Launch Year</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Join Waitlist</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">WavePilot Labs</div>
+                <ul class="footer-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#technology">Technology</a></li>
+                    <li><a href="#security">Security</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 WavePilot Labs. All rights reserved.</p>
+                <ul class="legal-links">
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
